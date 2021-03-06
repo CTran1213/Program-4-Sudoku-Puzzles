@@ -37,8 +37,8 @@ int SudokuFitness::howFit(int sudoku[9][9]) const
 	}
 
    cout << "Row conflicts: " << rowConflicts << endl;
-   cout << "Column conflicts: " << rowConflicts << endl;
-   cout << "Box conflicts: " << rowConflicts << endl;
+   cout << "Column conflicts: " << columnConflicts << endl;
+   cout << "Box conflicts: " << boxConflicts << endl;
    return rowConflicts + columnConflicts + boxConflicts;
 }
 
