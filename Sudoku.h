@@ -1,38 +1,59 @@
 #pragma once
 #include<iostream>
 #include "Puzzle.h"
-
-using namespace std;
+#include <ctype.h>
+//#include "SudokuFitness.h"
+using namespace std; 
 
 class Sudoku : public Puzzle
 {
-	friend istream& operator>>(istream& instream, Sudoku& p);
-	friend ostream& operator<<(ostream& outstream, const Sudoku& p)
+	friend istream& operator>>(istream& instream, Sudoku& sudoku)
    {
-      output << "+-------+-------+-------+" << endl;
-      for (int i = 0; i < 9; i++) {
-         output << "| ";
-         for (int j = 0; j < 9; j++) {
-               if (i == 3 || i == 6) {
-                  output << "| ";
-               }
-               output << sudokuNumbers_[i][j] << " ";
+      int count = 0;
+      char character;
+      int row = 0, column = 0;
+      while(count < 81){
+         cin >> character;
+         if(isdigit(character)){
+            ++count;
+             if(column == 9){
+                column = 0;
+                ++row;
+             }
+            sudoku.sudokuNumbers_[row][column] = character - '0';
+            ++column;
          }
-         output << " |" << endl;
-         if (i == 3 || i == 6) {
-               output << "+-------+-------+-------+" << endl;
+      } 
+      return instream;
+   }
+
+	friend ostream& operator<<(ostream& outstream, const Sudoku& sudoku)
+   {
+      outstream << "+-------+-------+-------+" << endl;
+      for (int i = 0; i < 9; i++) {
+         outstream << "| ";
+         for (int j = 0; j < 9; j++) {
+               if (j == 3 || j == 6) {
+                  outstream << "| ";
+               }
+               outstream << sudoku.sudokuNumbers_[i][j] << " ";
+         }
+         outstream << " |" << endl;
+         if (i == 2 || i == 5) {
+               outstream << "+-------+-------+-------+" << endl;
          }
       }
-      output << "+-------+-------+-------+" << endl;
-      return output;
+      outstream << "+-------+-------+-------+" << endl;
+      return outstream;
    }
 
 public:
    Sudoku();
-   ~Sudoku();
+   //~Sudoku();
+   int getFitness();
 
 private:
    int sudokuNumbers_[9][9];
    bool fixedValues_[9][9];
-   int fitnessNumber_;
+   //SudokuFitness fitnessObject_;
 };

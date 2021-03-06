@@ -5,11 +5,14 @@ using namespace std;
 
 class Puzzle
 {
-	virtual friend istream& operator>>(istream& instream, Puzzle& p);
-	virtual friend ostream& operator<<(ostream& outstream, const Puzzle& p);
+	friend istream& operator>>(istream& instream, Puzzle& puzzle);
+	friend ostream& operator<<(ostream& outstream, const Puzzle& puzzle);
 
 public:
 
-   virtual Puzzle();
+   Puzzle()
+   {
+      
+   }
 
 };
