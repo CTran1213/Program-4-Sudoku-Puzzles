@@ -1,7 +1,6 @@
 #pragmaonce
-#include "Fitness.h"
 
-class SudokuFitness
+class SudokuFitness: public Fitness
 {
     public:
     SudokuFitness();
