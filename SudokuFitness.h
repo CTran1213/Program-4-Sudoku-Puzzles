@@ -2,6 +2,9 @@
 #pragma once
 
 #include "Fitness.h"
+#include <iostream>
+
+using namespace std;
 
 class SudokuFitness: public Fitness
 {
