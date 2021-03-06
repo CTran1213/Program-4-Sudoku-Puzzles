@@ -21,6 +21,9 @@ class Sudoku : public Puzzle
                 ++row;
              }
             sudoku.sudokuNumbers_[row][column] = character - '0';
+            if(sudoku.sudokuNumbers_[row][column] != 0){
+               sudoku.fixedValues_[row][column] = true;
+            }
             ++column;
          }
       } 
