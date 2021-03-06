@@ -2,11 +2,12 @@
 
 class Fitness
 {
-   Fitness()
-   {
+   public:
+      Fitness()
+      {
 
-   }
+      }
 
-   virtual int howFit() = 0;
+      virtual int howFit(int sudoku[9][9]) const = 0;
    
-}
+};
