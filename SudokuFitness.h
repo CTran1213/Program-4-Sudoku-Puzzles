@@ -1,9 +1,9 @@
+#pragma once
+#include "Fitness.h"
 
-#pragmaonce
-
-class SudokuFitness: public Fitness
+class SudokuFitness : public Fitness
 {
     public:
     SudokuFitness();
-    int howFit(int sudoku[][]) const;
-}
+    int howFit(int sudoku[][9]) const;
+};

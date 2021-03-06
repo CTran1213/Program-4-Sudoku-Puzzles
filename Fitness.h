@@ -2,6 +2,7 @@
 
 class Fitness
 {
+   public:
    Fitness()
    {
 
@@ -9,4 +10,4 @@ class Fitness
 
    virtual int howFit() = 0;
    
-}
+};

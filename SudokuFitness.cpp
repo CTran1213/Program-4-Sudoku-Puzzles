@@ -5,7 +5,7 @@ SudokuFitness::SudokuFitness()
 
 }
 
-SudokuFitness::howFit(int sudoku[][])
+int SudokuFitness::howFit(int sudoku[][9]) const
 {
    int conflicts = 0;
    for(int i=0; i<9; i++){
@@ -14,4 +14,5 @@ SudokuFitness::howFit(int sudoku[][])
          
       }
    }
+   return conflicts;
 }
