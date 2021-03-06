@@ -2,7 +2,7 @@
 #include<iostream>
 #include "Puzzle.h"
 #include <ctype.h>
-//#include "SudokuFitness.h"
+#include "SudokuFitness.h"
 using namespace std; 
 
 class Sudoku : public Puzzle
@@ -58,5 +58,5 @@ public:
 private:
    int sudokuNumbers_[9][9];
    bool fixedValues_[9][9];
-   //SudokuFitness fitnessObject_;
+   SudokuFitness fitnessObject_;
 };
