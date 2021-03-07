@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Fitness.h"
+#include <vector>
 #include <iostream>
 
 using namespace std;
@@ -12,5 +13,6 @@ class SudokuFitness: public Fitness
       int howFit(int sudoku[9][9]) const override;
 
    private:
-      int calculateBoxConflicts(int startXPoint, int StartYPoint, int TwoDArray[9][9]) const;
+      int calculateBoxConflicts(int startXPoint, int StartYPoint, 
+         int sudoku[9][9]) const;
 };
