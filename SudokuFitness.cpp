@@ -5,7 +5,7 @@ SudokuFitness::SudokuFitness()
 
 }
 
-int SudokuFitness::howFit(int sudoku[9][9]) const
+int SudokuFitness::howFit(vector<vector<int>> sudoku) const
 {
    int rowConflicts = 0;
    int columnConflicts = 0;
@@ -45,7 +45,7 @@ int SudokuFitness::howFit(int sudoku[9][9]) const
 }
 
 int SudokuFitness::calculateBoxConflicts(int startXPoint, int startYPoint, 
-   int sudoku[9][9]) const
+   vector<vector<int>> sudoku) const
 {
    int boxConflicts = 0;
 
