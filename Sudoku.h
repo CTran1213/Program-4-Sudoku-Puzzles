@@ -61,6 +61,8 @@ public:
    //~Sudoku();
    int getFitness();
    vector<vector<int>> getSudokuArray() const;
+   bool isFixed(int row, int column) const;
+   bool setSudokuBoxValue(int num, int row, int column);
 
 private:
    vector<vector<int>> sudokuNumbers_;

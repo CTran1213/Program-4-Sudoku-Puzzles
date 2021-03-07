@@ -9,7 +9,5 @@ class Reproduction
 
       }
 
-      Puzzle makeOffspring(Puzzle*&p);
-
-
+      virtual Puzzle makeOffspring(Puzzle*& p) = 0;
 };
