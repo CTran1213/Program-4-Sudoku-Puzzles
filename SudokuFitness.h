@@ -10,9 +10,9 @@ class SudokuFitness: public Fitness
 {
    public:
       SudokuFitness();
-      int howFit(int sudoku[9][9]) const override;
+      int howFit(vector<vector<int>> sudoku) const override;
 
    private:
       int calculateBoxConflicts(int startXPoint, int StartYPoint, 
-         int sudoku[9][9]) const;
+         vector<vector<int>> sudoku) const;
 };

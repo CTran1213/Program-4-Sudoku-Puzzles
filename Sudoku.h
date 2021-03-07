@@ -3,6 +3,7 @@
 #include "Puzzle.h"
 #include <ctype.h>
 #include "SudokuFitness.h"
+#include <vector>
 using namespace std; 
 
 class Sudoku : public Puzzle
@@ -16,10 +17,14 @@ class Sudoku : public Puzzle
          cin >> character;
          if(isdigit(character)){
             ++count;
-             if(column == 9){
-                column = 0;
-                ++row;
-             }
+            if(column == 9){
+               column = 0;
+               ++row;
+            }
+
+            sudoku.sudokuNumbers_[row].resize(9);
+            sudoku.fixedValues_[row].resize(9);
+
             sudoku.sudokuNumbers_[row][column] = character - '0';
             if(sudoku.sudokuNumbers_[row][column] != 0){
                sudoku.fixedValues_[row][column] = true;
@@ -27,6 +32,7 @@ class Sudoku : public Puzzle
             ++column;
          }
       } 
+      
       return instream;
    }
 
@@ -41,7 +47,7 @@ class Sudoku : public Puzzle
                }
                outstream << sudoku.sudokuNumbers_[i][j] << " ";
          }
-         outstream << " |" << endl;
+         outstream << "|" << endl;
          if (i == 2 || i == 5) {
                outstream << "+-------+-------+-------+" << endl;
          }
@@ -54,9 +60,10 @@ public:
    Sudoku();
    //~Sudoku();
    int getFitness();
+   vector<vector<int>> getSudokuArray() const;
 
 private:
-   int sudokuNumbers_[9][9];
-   bool fixedValues_[9][9];
+   vector<vector<int>> sudokuNumbers_;
+   vector<vector<bool>> fixedValues_;
    SudokuFitness fitnessObject_;
 };
