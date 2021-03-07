@@ -2,7 +2,8 @@
 
 Sudoku::Sudoku()
 {
-   
+  sudokuNumbers_.resize(9);
+  fixedValues_.resize(9);
 }
 
 int Sudoku::getFitness()
