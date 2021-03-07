@@ -2,6 +2,7 @@
 #include "Reproduction.h"
 #include <vector>
 #include <iostream>
+#include <stdlib.h>
 #include "Sudoku.h"
 
 using namespace std;

@@ -18,7 +18,7 @@ vector<vector<int>> Sudoku::getSudokuArray() const
 
 bool Sudoku::isFixed(int row, int column) const
 {
-   if(sudokuNumbers_[row][column])
+   if(fixedValues_[row][column])
    {
       return true;
    }
