@@ -1,4 +1,6 @@
 #pragma once 
+#include <vector>
+using namespace std;
 
 class Fitness
 {
@@ -8,6 +10,6 @@ class Fitness
 
       }
 
-      virtual int howFit(int sudoku[9][9]) const = 0;
+      virtual int howFit(vector<vector<int>> sudoku) const = 0;
    
 };
