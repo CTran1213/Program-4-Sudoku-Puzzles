@@ -1,5 +1,6 @@
 #pragma once
 #include "Puzzle.h"
+#include "Sudoku.h"
 
 class Reproduction
 {
@@ -9,5 +10,5 @@ class Reproduction
 
       }
 
-      virtual Puzzle makeOffspring(Puzzle*& p) = 0;
+      virtual Sudoku* makeOffspring(Sudoku*& sudokuPuzzle) = 0;
 };

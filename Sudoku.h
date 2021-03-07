@@ -29,6 +29,9 @@ class Sudoku : public Puzzle
             if(sudoku.sudokuNumbers_[row][column] != 0){
                sudoku.fixedValues_[row][column] = true;
             }
+            else{
+               sudoku.sudokuNumbers_[row][column] = 1;
+            }
             ++column;
          }
       } 
