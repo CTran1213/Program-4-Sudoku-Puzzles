@@ -49,8 +49,6 @@ bool Sudoku::isFixed(int row, int column) const
 
 bool Sudoku::setSudokuBoxValue(int num, int row, int column)
 {
-   cout << "NumChange: " << num << endl;
-   cout << "Sudoku: " << sudokuNumbers_[row][column] << endl;
    this->sudokuNumbers_[row][column] = num;
    return true;
 }
