@@ -5,13 +5,15 @@ SudokuFitness::SudokuFitness()
 
 }
 
-int SudokuFitness::howFit(vector<vector<int>> sudoku) const
+int SudokuFitness::howFit(Puzzle*& sudokuPuzzle) const
 {
    int rowConflicts = 0;
    int columnConflicts = 0;
    int boxConflicts = 0;
 
+   //Sudoku& s = *(static_cast<Sudoku*>(sudokuPuzzle));
 
+   vector<vector<int>> sudoku = sudokuPuzzle->getSudokuArray();
    /*checks conflicts in every row and column*/
    int row = 0;
    while(row<9){
@@ -19,13 +21,9 @@ int SudokuFitness::howFit(vector<vector<int>> sudoku) const
          for(int index= column + 1; index<9; index++){
             if(sudoku[row][column] == sudoku[row][index]){
                ++rowConflicts;
-               cout << "Point of conflict in row: " << row << ", " << column <<
-                " and " << row << ", " << index << endl;
             }
             if(sudoku[column][row] == sudoku[index][row]){
                ++columnConflicts;
-               cout << "Point of conflict in column: " << column << ", " << row
-                << " and " << index << ", " << row << endl;
             }
          }
       }
@@ -38,9 +36,7 @@ int SudokuFitness::howFit(vector<vector<int>> sudoku) const
 		}
 	}
 
-   cout << "Row conflicts: " << rowConflicts << endl;
-   cout << "Column conflicts: " << columnConflicts << endl;
-   cout << "Box conflicts: " << boxConflicts << endl;
+   sudokuPuzzle->setFitnessNumber(rowConflicts + columnConflicts + boxConflicts);
    return rowConflicts + columnConflicts + boxConflicts;
 }
 
@@ -62,9 +58,6 @@ int SudokuFitness::calculateBoxConflicts(int startXPoint, int startYPoint,
       for (int j = i+1; j < 9; j++){
          if(values[i] == values[j]){
 				++boxConflicts;
-            cout << "Points of conflict for box: " << "Starting point: " << 
-               startXPoint << ", " << startYPoint << endl;
-            cout << "conflict: value " << i << ", value " << j << endl;
 			}
       }
 	}

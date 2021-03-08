@@ -1,5 +1,5 @@
 #pragma once
-#include "Sudoku.h"
+#include "Puzzle.h"
 
 class PuzzleFactory
 {
@@ -9,5 +9,5 @@ class PuzzleFactory
 
    }
 
-   virtual Sudoku* createPuzzle(Sudoku*& sudoku) = 0;
+   virtual Puzzle* createPuzzle(Puzzle*& sudoku) = 0;
 };

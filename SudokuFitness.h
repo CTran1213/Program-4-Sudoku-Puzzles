@@ -6,11 +6,12 @@
 
 using namespace std;
 
+class Sudoku;
 class SudokuFitness: public Fitness
 {
    public:
       SudokuFitness();
-      int howFit(vector<vector<int>> sudoku) const override;
+      int howFit(Puzzle*& sudokuPuzzle) const override;
 
    private:
       int calculateBoxConflicts(int startXPoint, int StartYPoint, 

@@ -4,11 +4,30 @@ Sudoku::Sudoku()
 {
   sudokuNumbers_.resize(9);
   fixedValues_.resize(9);
+  for (int i = 0; i < 9; i++)
+  {
+     fixedValues_[i].resize(9);
+     sudokuNumbers_[i].resize(9);
+  }
+
+  for (int i = 0; i < 9; i++)
+  {
+      for (int j = 0; j < 9; j++)
+      {
+         fixedValues_[i][j] = false;
+      }
+  }
 }
 
 int Sudoku::getFitness()
 {
-   return this->fitnessObject_.howFit(this->sudokuNumbers_);
+   return fitnessNumber_;
+}
+
+bool Sudoku::setFitnessNumber(int num)
+{
+   fitnessNumber_ = num;
+   return true;
 }
 
 vector<vector<int>> Sudoku::getSudokuArray() const
@@ -30,7 +49,9 @@ bool Sudoku::isFixed(int row, int column) const
 
 bool Sudoku::setSudokuBoxValue(int num, int row, int column)
 {
-   sudokuNumbers_[row][column] = num;
+   cout << "NumChange: " << num << endl;
+   cout << "Sudoku: " << sudokuNumbers_[row][column] << endl;
+   this->sudokuNumbers_[row][column] = num;
    return true;
 }
 

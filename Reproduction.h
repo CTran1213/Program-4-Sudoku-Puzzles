@@ -10,5 +10,5 @@ class Reproduction
 
       }
 
-      virtual Sudoku* makeOffspring(Sudoku*& sudokuPuzzle) = 0;
+      virtual Puzzle* makeOffspring(Puzzle*& sudokuPuzzle) = 0;
 };

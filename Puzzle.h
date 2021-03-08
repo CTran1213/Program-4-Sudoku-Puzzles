@@ -1,6 +1,7 @@
 
 #pragma once
 #include<iostream>
+#include <vector>
 using namespace std;
 
 class Puzzle
@@ -14,5 +15,9 @@ public:
    {
       
    }
+
+   virtual int getFitness() = 0;
+   virtual bool setFitnessNumber(int num) = 0;
+   virtual vector<vector<int>> getSudokuArray() const = 0;
 
 };
