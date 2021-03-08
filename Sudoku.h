@@ -22,15 +22,9 @@ class Sudoku : public Puzzle
                ++row;
             }
 
-            sudoku.sudokuNumbers_[row].resize(9);
-            sudoku.fixedValues_[row].resize(9);
-
             sudoku.sudokuNumbers_[row][column] = character - '0';
             if(sudoku.sudokuNumbers_[row][column] != 0){
                sudoku.fixedValues_[row][column] = true;
-            }
-            else{
-               sudoku.sudokuNumbers_[row][column] = 1;
             }
             ++column;
          }
@@ -63,6 +57,7 @@ public:
    Sudoku();
    //~Sudoku();
    int getFitness();
+   bool setFitnessNumber(int num);
    vector<vector<int>> getSudokuArray() const;
    bool isFixed(int row, int column) const;
    bool setSudokuBoxValue(int num, int row, int column);
@@ -70,5 +65,5 @@ public:
 private:
    vector<vector<int>> sudokuNumbers_;
    vector<vector<bool>> fixedValues_;
-   SudokuFitness fitnessObject_;
+   int fitnessNumber_;
 };

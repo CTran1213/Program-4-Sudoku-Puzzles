@@ -1,5 +1,6 @@
 #pragma once 
 #include <vector>
+#include "Puzzle.h"
 using namespace std;
 
 class Fitness
@@ -10,6 +11,6 @@ class Fitness
 
       }
 
-      virtual int howFit(vector<vector<int>> sudoku) const = 0;
+      virtual int howFit(Puzzle*& sudokuPuzzle) const = 0;
    
 };
