@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <cmath>
 #include <random>
+#include <ctime>
 
 using namespace std;
 

@@ -10,7 +10,7 @@ int main()
 {
    Sudoku s;
    //Puzzle p;
-
+   srand(time(NULL));
    Puzzle *puz = &s;
    SudokuFitness sf;
    cin >> s;
