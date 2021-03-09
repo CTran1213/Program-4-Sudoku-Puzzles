@@ -154,8 +154,8 @@ void MinHeap::bubbleUp(int index)
 {
    /*Checks if the parent item is greater then the item*/
 
-   // Sudoku *sudoku1 = (Sudoku *) (this->heap_[parent(index)]);
-   // Sudoku *sudoku2 = (Sudoku *) (this->heap_[index]);
+   Sudoku *sudoku1 = (Sudoku *) (this->heap_[parent(index)]);
+   Sudoku *sudoku2 = (Sudoku *) (this->heap_[index]);
    if(sudoku1->getFitness() > sudoku2->getFitness())
    {
       /*swaps the two items and continues bubbling up the Puzzle*/
@@ -181,10 +181,10 @@ void MinHeap::bubbleDown(int index)
    int l = left(index);
    int smallest = index;
 
-   // Sudoku *sudoku1 = (Sudoku *) (this->heap_[l]);
-   // Sudoku *sudoku2 = (Sudoku *) (this->heap_[index]);
-   // Sudoku *sudoku3 = (Sudoku *) (this->heap_[r]);
-   // Sudoku *sudoku4 = (Sudoku *) (this->heap_[smallest]);
+   Sudoku *sudoku1 = (Sudoku *) (this->heap_[l]);
+   Sudoku *sudoku2 = (Sudoku *) (this->heap_[index]);
+   Sudoku *sudoku3 = (Sudoku *) (this->heap_[r]);
+   Sudoku *sudoku4 = (Sudoku *) (this->heap_[smallest]);
 
    /*Checks if left child is less then heap size and the item in the heap is less 
       then it's parent*/

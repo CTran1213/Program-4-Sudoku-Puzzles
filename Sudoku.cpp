@@ -52,23 +52,3 @@ bool Sudoku::setSudokuBoxValue(int num, int row, int column)
    this->sudokuNumbers_[row][column] = num;
    return true;
 }
-
-bool Sudoku::operator<(const Sudoku& sudoku) const
-{
-   //Sudoku *temp = (Sudoku *) &sudoku;
-   if (getFitness() < sudoku.getFitness())
-   {
-      return true;
-   }
-   return false;
-}
-
-bool Sudoku::operator>(const Sudoku& sudoku) const
-{
-   //Sudoku *temp = (Sudoku *) &sudoku;
-   if (getFitness() > sudoku.getFitness())
-   {
-      return true;
-   }
-   return false;
-}

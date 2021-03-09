@@ -62,9 +62,6 @@ public:
    bool isFixed(int row, int column) const;
    bool setSudokuBoxValue(int num, int row, int column);
 
-   bool operator<(const Sudoku& sudoku) const;
-   bool operator>(const Sudoku& sudoku) const;
-
 private:
    vector<vector<int>> sudokuNumbers_;
    vector<vector<bool>> fixedValues_;
