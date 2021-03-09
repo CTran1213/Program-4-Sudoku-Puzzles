@@ -5,7 +5,7 @@ SudokuOffspring::SudokuOffspring()
 
 }
 
-Puzzle* SudokuOffspring::makeOffspring(Puzzle*& sudokuPuzzle) 
+Puzzle*& SudokuOffspring::makeOffspring(Puzzle*& sudokuPuzzle) 
 {
    double val; //Random number used to get a 5% probability
    int numChange; //A number between and including 1-9

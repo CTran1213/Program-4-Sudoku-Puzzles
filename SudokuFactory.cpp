@@ -5,7 +5,7 @@ SudokuFactory::SudokuFactory()
 
 }
 
-Puzzle* SudokuFactory::createPuzzle(Puzzle*& sudokuPuzzle)
+Puzzle*& SudokuFactory::createPuzzle(Puzzle*& sudokuPuzzle)
 {
    SudokuOffspring child;
    child.makeOffspring(sudokuPuzzle);

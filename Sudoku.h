@@ -56,11 +56,14 @@ class Sudoku : public Puzzle
 public:
    Sudoku();
    //~Sudoku();
-   int getFitness();
+   int getFitness() const;
    bool setFitnessNumber(int num);
    vector<vector<int>> getSudokuArray() const;
    bool isFixed(int row, int column) const;
    bool setSudokuBoxValue(int num, int row, int column);
+
+   bool operator<(const Sudoku& sudoku) const;
+   bool operator>(const Sudoku& sudoku) const;
 
 private:
    vector<vector<int>> sudokuNumbers_;

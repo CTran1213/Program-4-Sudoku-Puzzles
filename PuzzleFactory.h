@@ -9,5 +9,5 @@ class PuzzleFactory
 
    }
 
-   virtual Puzzle* createPuzzle(Puzzle*& sudoku) = 0;
+   virtual Puzzle*& createPuzzle(Puzzle*& sudoku) = 0;
 };
