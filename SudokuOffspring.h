@@ -13,5 +13,5 @@ class SudokuOffspring: public Reproduction
 {
    public:
    SudokuOffspring();
-   Puzzle* makeOffspring(Puzzle*& sudokuPuzzle)  override;
+   Puzzle*& makeOffspring(Puzzle*& sudokuPuzzle)  override;
 };

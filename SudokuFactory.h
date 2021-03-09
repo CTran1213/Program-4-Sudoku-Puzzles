@@ -7,5 +7,5 @@ class SudokuFactory : public PuzzleFactory
 {
    public:
    SudokuFactory();
-   Puzzle* createPuzzle(Puzzle*& sudokuPuzzle);
+   Puzzle*& createPuzzle(Puzzle*& sudokuPuzzle);
 };
