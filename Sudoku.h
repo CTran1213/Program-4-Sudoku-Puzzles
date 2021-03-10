@@ -50,6 +50,7 @@ class Sudoku : public Puzzle
          }
       }
       outstream << "+-------+-------+-------+" << endl;
+      outstream << sudoku.getFitness() << endl;
       return outstream;
    }
 

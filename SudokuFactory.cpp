@@ -1,13 +1,13 @@
 #include "SudokuFactory.h"
 
-SudokuFactory::SudokuFactory()
+SudokuFactory::SudokuFactory(Reproduction*& offspringCreator)
 {
-
+   SudokuOffspring* temp = (SudokuOffspring *) offspringCreator;
+   this->offspringCreator_ = temp;
 }
 
 Puzzle*& SudokuFactory::createPuzzle(Puzzle*& sudokuPuzzle)
 {
-   SudokuOffspring child;
-   child.makeOffspring(sudokuPuzzle);
+   this->offspringCreator_->makeOffspring(sudokuPuzzle);
    return sudokuPuzzle;
 }
