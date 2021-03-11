@@ -16,11 +16,17 @@ using namespace std;
 class Fitness
 {
    public:
+      //Constructor
       Fitness()
       {
 
       }
-
+      
+      //Virtual method that will be implemented in SudokuFitness.h
+      //This method takens in a puzzle and counts the number of conflicts in each row, 
+      //column, and box. The conflicts are then added and that is the fitness number of the puzzle
+      //Precondition: All variable/non-fixed boxes are not zeroes
+      //Postcondition: A fitness number for the puzzle is returned. The number cannot be higher than 972
       virtual int howFit(Puzzle*& sudokuPuzzle) const = 0;
    
 };
