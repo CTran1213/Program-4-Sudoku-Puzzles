@@ -20,7 +20,7 @@ Puzzle*& SudokuOffspring::makeOffspring(Puzzle*& sudokuPuzzle)
       //iterate through the columns
       for (int j = 0; j < 9; j++)
       {
-         val = ((double)rand())/ (RAND_MAX + 1.0); //Random number between 0 and 1
+         val = ((double)rand())/ (RAND_MAX); //Random number between 0 and 1
          numChange = rand()%9 + 1; //Random number between and including 1-9
          if (tempSudoku[i][j] == 0) //Sets the box to a random number [1,9] if it is empty
          {

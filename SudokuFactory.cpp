@@ -8,6 +8,7 @@ SudokuFactory::SudokuFactory(Reproduction*& offspringCreator)
 
 Puzzle*& SudokuFactory::createPuzzle(Puzzle*& sudokuPuzzle)
 {
-   this->offspringCreator_->makeOffspring(sudokuPuzzle);
+   SudokuOffspring offspringCreator;
+   offspringCreator.makeOffspring(sudokuPuzzle);
    return sudokuPuzzle;
 }

@@ -35,8 +35,6 @@ int SudokuFitness::howFit(Puzzle*& sudokuPuzzle) const
 			boxConflicts += calculateBoxConflicts(i*3, j*3, sudoku);  
 		}
 	}
-
-   sudokuPuzzle->setFitnessNumber(rowConflicts + columnConflicts + boxConflicts);
    return rowConflicts + columnConflicts + boxConflicts;
 }
 

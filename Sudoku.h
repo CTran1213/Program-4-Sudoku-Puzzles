@@ -50,15 +50,12 @@ class Sudoku : public Puzzle
          }
       }
       outstream << "+-------+-------+-------+" << endl;
-      outstream << sudoku.getFitness() << endl;
       return outstream;
    }
 
 public:
    Sudoku();
    //~Sudoku();
-   int getFitness() const;
-   bool setFitnessNumber(int num);
    vector<vector<int>> getSudokuArray() const;
    bool isFixed(int row, int column) const;
    bool setSudokuBoxValue(int num, int row, int column);
@@ -66,5 +63,4 @@ public:
 private:
    vector<vector<int>> sudokuNumbers_;
    vector<vector<bool>> fixedValues_;
-   int fitnessNumber_;
 };

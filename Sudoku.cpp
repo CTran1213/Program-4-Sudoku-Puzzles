@@ -19,17 +19,6 @@ Sudoku::Sudoku()
   }
 }
 
-int Sudoku::getFitness() const
-{
-   return fitnessNumber_;
-}
-
-bool Sudoku::setFitnessNumber(int num)
-{
-   fitnessNumber_ = num;
-   return true;
-}
-
 vector<vector<int>> Sudoku::getSudokuArray() const
 {
    return sudokuNumbers_;
