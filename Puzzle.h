@@ -15,9 +15,6 @@ public:
    {
       
    }
-
-   virtual int getFitness() const = 0;
-   virtual bool setFitnessNumber(int num) = 0;
    virtual vector<vector<int>> getSudokuArray() const = 0;
 
 };

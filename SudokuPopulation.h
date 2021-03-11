@@ -5,19 +5,22 @@
 #include "SudokuOffspring.h"
 #include "SudokuFitness.h"
 #include "Reproduction.h"
+#include <deque>
+using namespace std;
+
 
 class SudokuPopulation : public Population
 {
    public:
-      SudokuPopulation();
-      void cull();
-      void newGeneration();
+      SudokuPopulation(int populationSize, Puzzle*& firstPuzzle);
+      void cull(int percent);
+      void newGeneration(int percent);
       int getBestFitness();
       Puzzle*& getBestIndividual();
 
-      bool sortPopulation(vector<Node*>& item_vector, int first, int last);
-      bool insertionSort(vector<Node*>& item_vector, int first, int last);
+      // bool sortPopulation(vector<Node*>& item_vector, int first, int last);
+      // bool insertionSort(vector<Node*>& item_vector, int first, int last);
 
-      vector<Node*> population_;
+      deque<Node*> population_;
       int populationSize_;
 };
