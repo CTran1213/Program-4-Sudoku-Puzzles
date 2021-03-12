@@ -4,13 +4,15 @@
 //@studentID: 1727406
 //Catherine Tran ID: 2021829
 //This is the implementation of Sudoku.h
-//The Sudoku class must hold the representation of a Sudoku puzzle, meaning it must know which numbers in the 
-//9-by-9 grid are fixed (the ones given at the start of the puzzle) and which are variable (the ones written 
+//The Sudoku class must hold the representation of a Sudoku puzzle, meaning it 
+//must know which numbers in the 9-by-9 grid are fixed (the ones given at the 
+//start of the puzzle) and which are variable (the ones written 
 //in as a possible solution).
 
 #include "Sudoku.h"
 
-//Constructor. Resizes the vector to hold a 9-by-9 grid. Makes every fixed value false.
+//Constructor. Resizes the vector to hold a 9-by-9 grid. Makes every fixed 
+//value false.
 Sudoku::Sudoku()
 {
   sudokuNumbers_.resize(9);
@@ -51,14 +53,16 @@ vector<vector<int>> Sudoku::getSudokuArray()
    return sudokuNumbers_;
 }
 
-//This method returns the 9-by-9 grid of fixed values. Is normally used with the sudoku array
+//This method returns the 9-by-9 grid of fixed values. Is normally used with 
+//the sudoku array
 //Precondition: none
 //Postcondition: 9-by-9 grid of booleans are returned
 vector<vector<bool>> Sudoku::getFixedValues()
 {
    return fixedValues_;
 }
-//Returns a boolean letting the user know if the box at the specified row and column is fixed or not
+//Returns a boolean letting the user know if the box at the specified row and
+// column is fixed or not
 //Precondition: the sudoku is initialized
 //Postcondition: returns true if the box is fixed, false otherwise
 bool Sudoku::isFixed(int row, int column) const

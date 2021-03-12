@@ -15,15 +15,18 @@ class SudokuFactory : public PuzzleFactory
 {
    public:
       //Constructor. Accepts a reproduction object and turns it 
-      //into a SudokuOffspring object. This is used to call the method "makeOffspring"
+      //into a SudokuOffspring object. This is used to call the method 
+      //"makeOffspring"
       SudokuFactory(Reproduction*& offspringCreator);
       
-      //This method sses the offspringCreator data member to create and return a new puzzle
+      //This method sses the offspringCreator data member to create and return
+      // a new puzzle
       //Precondition: None
       //Postcondition: Returns a puzzle created from the sudokuoffspring object
       Puzzle* createPuzzle(Puzzle*& sudokuPuzzle);
 
    private:
-      //This object is used to create new mutated puzzles. It is used in the createPuzzle method
+      //This object is used to create new mutated puzzles. It is used in the 
+      //createPuzzle method
       SudokuOffspring offspringCreator_;
 };

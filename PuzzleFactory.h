@@ -4,7 +4,8 @@
 //@studentID: 1727406
 //Catherine Tran ID: 2021829
 //A PuzzleFactory is an abstract factory design pattern for producing puzzles.
-//A PuzzleFactory is provided at construction time with a Reproduction object that it uses to create new instances of Puzzle.
+//A PuzzleFactory is provided at construction time with a Reproduction object 
+//that it uses to create new instances of Puzzle.
 
 #pragma once
 #include "Puzzle.h"
@@ -20,7 +21,8 @@ class PuzzleFactory
    }
 
    //This is a virtual method that is used in SudokuFactory
-   //This method uses the Reproduction data member to create and return a new puzzle
+   //This method uses the Reproduction data member to create and return a 
+   //new puzzle
    //Precondition: None
    //Postcondition: Returns a puzzle created from the sudokuoffspring object
    virtual Puzzle* createPuzzle(Puzzle*& sudoku) = 0;
