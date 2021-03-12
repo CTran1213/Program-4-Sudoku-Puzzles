@@ -30,28 +30,29 @@ Sudoku::Sudoku()
   }
 }
 
-<<<<<<< HEAD
-=======
-int Sudoku::getFitness() const
+Sudoku::~Sudoku()
 {
-   return fitnessNumber_;
+   
 }
 
-bool Sudoku::setFitnessNumber(int num)
+Sudoku::Sudoku(vector<vector<int>>& a, vector<vector<bool>>& b)
 {
-   fitnessNumber_ = num;
-   return true;
+   this->sudokuNumbers_ = a;
+   this->fixedValues_ = b;
 }
 
 //Returns the 9-by-9 vector. Is used in other classes to change or look at each box
 //Precondition: none
 //Postcondition: the sudoku is initialized and the vector is returned
->>>>>>> 970e381c91ebe09243e927fcb41bce9c747f4d8e
-vector<vector<int>> Sudoku::getSudokuArray() const
+vector<vector<int>> Sudoku::getSudokuArray()
 {
    return sudokuNumbers_;
 }
 
+vector<vector<bool>> Sudoku::getFixedValues()
+{
+   return fixedValues_;
+}
 //Returns a boolean letting the user know if the box at the specified row and column is fixed or not
 //Precondition: the sudoku is initialized
 //Postcondition: returns true if the box is fixed, false otherwise

@@ -72,18 +72,11 @@ class Sudoku : public Puzzle
 public:
    //Constructor. Resizes the vector to hold a 9-by-9 grid. Makes every fixed value false.
    Sudoku();
-   //~Sudoku();
-<<<<<<< HEAD
-=======
-   int getFitness() const;
-   bool setFitnessNumber(int num);
-   
-   //Returns the 9-by-9 vector. Is used in other classes to change or look at each box
-   //Precondition: none
-   //Postcondition: the sudoku is initialized and the vector is returned
->>>>>>> 970e381c91ebe09243e927fcb41bce9c747f4d8e
-   vector<vector<int>> getSudokuArray() const;
-   
+   ~Sudoku();
+
+   Sudoku(vector<vector<int>>& a, vector<vector<bool>>& b);
+   vector<vector<int>> getSudokuArray();
+   vector<vector<bool>> getFixedValues();
    //Returns a boolean letting the user know if the box at the specified row and column is fixed or not
    //Precondition: the sudoku is initialized
    //Postcondition: returns true if the box is fixed, false otherwise
@@ -102,9 +95,4 @@ private:
    //True means the number is fixed and cannot be change, while false means the number 
    //isn't fixed and can be changed
    vector<vector<bool>> fixedValues_;
-<<<<<<< HEAD
 };
-=======
-   int fitnessNumber_;
-};
->>>>>>> 970e381c91ebe09243e927fcb41bce9c747f4d8e
