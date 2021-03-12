@@ -1,5 +1,5 @@
 //Sudoku.cpp
-//3/11/2021
+//3/12/2021
 //@author: Faduma Farah
 //@studentID: 1727406
 //Catherine Tran ID: 2021829
@@ -30,11 +30,13 @@ Sudoku::Sudoku()
   }
 }
 
+//Destructor
 Sudoku::~Sudoku()
 {
    
 }
 
+//2nd constructor that copies over a sudoku grid and its fixed values
 Sudoku::Sudoku(vector<vector<int>>& a, vector<vector<bool>>& b)
 {
    this->sudokuNumbers_ = a;
@@ -49,6 +51,9 @@ vector<vector<int>> Sudoku::getSudokuArray()
    return sudokuNumbers_;
 }
 
+//This method returns the 9-by-9 grid of fixed values. Is normally used with the sudoku array
+//Precondition: none
+//Postcondition: 9-by-9 grid of booleans are returned
 vector<vector<bool>> Sudoku::getFixedValues()
 {
    return fixedValues_;

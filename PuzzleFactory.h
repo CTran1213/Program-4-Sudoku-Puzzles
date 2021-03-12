@@ -24,6 +24,4 @@ class PuzzleFactory
    //Precondition: None
    //Postcondition: Returns a puzzle created from the sudokuoffspring object
    virtual Puzzle* createPuzzle(Puzzle*& sudoku) = 0;
-   // protected:
-   // Reproduction* reproduction;
 };

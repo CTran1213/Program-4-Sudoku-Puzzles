@@ -1,5 +1,5 @@
 //Sudoku.h
-//3/11/2021
+//3/12/2021
 //@author: Faduma Farah
 //@studentID: 1727406
 //Catherine Tran ID: 2021829
@@ -72,11 +72,23 @@ class Sudoku : public Puzzle
 public:
    //Constructor. Resizes the vector to hold a 9-by-9 grid. Makes every fixed value false.
    Sudoku();
+
+   //Destructor
    ~Sudoku();
 
+   //2nd constructor that copies over a sudoku grid and its fixed values
    Sudoku(vector<vector<int>>& a, vector<vector<bool>>& b);
+
+   //Returns the 9-by-9 vector. Is used in other classes to change or look at each box
+   //Precondition: none
+   //Postcondition: the sudoku is initialized and the vector is returned
    vector<vector<int>> getSudokuArray();
+
+   //This method returns the 9-by-9 grid of fixed values. Is normally used with the sudoku array
+   //Precondition: none
+   //Postcondition: 9-by-9 grid of booleans are returned
    vector<vector<bool>> getFixedValues();
+
    //Returns a boolean letting the user know if the box at the specified row and column is fixed or not
    //Precondition: the sudoku is initialized
    //Postcondition: returns true if the box is fixed, false otherwise
