@@ -1,3 +1,11 @@
+//SudokuOffspring.h
+//3/12/2021
+//@author: Faduma Farah
+//@studentID: 1727406
+//Catherine Tran ID: 2021829
+//The SudokuOffspring class implements "makeOffspring" for Puzzle objects. It uses the 
+//mutation operator from genetic programming to create a copy of the given Puzzle 
+//which has a 3% chance of mutation
 #pragma once
 #include "Reproduction.h"
 #include <vector>
