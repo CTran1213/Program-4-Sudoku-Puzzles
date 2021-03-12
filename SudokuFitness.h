@@ -10,6 +10,7 @@
 #pragma once
 
 #include "Fitness.h"
+#include "Sudoku.h"
 #include <vector>
 #include <iostream>
 

@@ -26,9 +26,9 @@ int SudokuFitness::howFit(Puzzle*& sudokuPuzzle) const
    int columnConflicts = 0;
    int boxConflicts = 0;
 
-   //Sudoku& s = *(static_cast<Sudoku*>(sudokuPuzzle));
+   Sudoku& s = *(static_cast<Sudoku * >(sudokuPuzzle)); 
 
-   vector<vector<int>> sudoku = sudokuPuzzle->getSudokuArray();
+   vector<vector<int>> sudoku = s.getSudokuArray();
    /*checks conflicts in every row and column*/
    int row = 0;
    while(row<9){

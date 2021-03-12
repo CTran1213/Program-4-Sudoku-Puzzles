@@ -1,4 +1,4 @@
-//SudokuFitness.cpp
+//SudokuOffspring.cpp
 //3/12/2021
 //@author: Faduma Farah
 //@studentID: 1727406
@@ -9,12 +9,17 @@
 //which has a 3% chance of mutation
 #include "SudokuOffspring.h"
 
+//constructor
 SudokuOffspring::SudokuOffspring()
 {
    
 }
 
-//
+//This method creates a copy of the given puzzle and each sudoku box in the copy has a 
+//3% chance of mutating. If the given puzzle has any 0's in the grid, the 0's are changed 
+//to random number between 1-9.
+//Precondition: none
+//Postcondition: A copy of the given puzzle is returned
 Puzzle* SudokuOffspring::makeOffspring(Puzzle*& sudokuPuzzle) 
 {
    double val; //Random number used to get a 5% probability

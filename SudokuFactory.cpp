@@ -20,7 +20,5 @@ SudokuFactory::SudokuFactory(Reproduction*& offspringCreator)
 //Postcondition: Returns a puzzle created from the sudokuoffspring object
 Puzzle* SudokuFactory::createPuzzle(Puzzle*& sudokuPuzzle)
 {
-   //Sudoku *s = new Sudoku();
-   //s = (Sudoku*) offspringCreator_.makeOffspring(sudokuPuzzle);
    return offspringCreator_.makeOffspring(sudokuPuzzle);
 }
