@@ -27,7 +27,6 @@ class Population
    {
       
    }
-
    //This is a virtual method. It is implemented in SudokuPopulation
    //This method eliminates 90% of the least fit members in the population
    //Precondition: There are puzzles in the population

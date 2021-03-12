@@ -108,7 +108,3 @@ private:
    //isn't fixed and can be changed
    vector<vector<bool>> fixedValues_;
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> 8265093599aab94bfe6dd465e290aa558e6db326

@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
 
    Sudoku input;
    cin >> input;
-   cout << input;
+
    Puzzle* puzzle = &input;
 
    srand(time(NULL));
@@ -57,4 +57,4 @@ int main(int argc, char* argv[])
    cout << "Best Fitness Number: " << population.getBestFitness() << endl;
    cout << "Counter: " << generationCounter << endl;
    return 0;
-}
+};
