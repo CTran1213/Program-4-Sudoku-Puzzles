@@ -19,8 +19,7 @@ SudokuPopulation::SudokuPopulation(int populationSize, Puzzle*& firstPuzzle)
 
 SudokuPopulation::~SudokuPopulation()
 {
-   while(!population_.empty())
-   {
+   while(!population_.empty()){
       delete this->population_.back();
       this->population_.pop_back();
    }

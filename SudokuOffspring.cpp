@@ -8,8 +8,6 @@
 //mutation operator from genetic programming to create a copy of the given Puzzle 
 //which has a 3% chance of mutation
 #include "SudokuOffspring.h"
-#include <memory>
-#include <type_traits>
 
 SudokuOffspring::SudokuOffspring()
 {
