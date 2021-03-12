@@ -8,14 +8,12 @@ the population. The Node contains a pointer to a puzzle and a fitness numer.
 This header file contains the method declrations for the Node class such as
 the constructor, comparison operator overloads, getters for the data members, 
 and the destructor.*/
-
 #pragma once
 
 #include "Puzzle.h"
 #include "Sudoku.h"
 
 class Node{
-
    /*Purpose: 
         Parameters: 
         Preconditions: 
@@ -32,8 +30,7 @@ class Node{
       return outstream;
    }
    public:
-
-      /*Purpose: 
+        /*Purpose: 
         Parameters: 
         Preconditions: 
         Postconditions: 

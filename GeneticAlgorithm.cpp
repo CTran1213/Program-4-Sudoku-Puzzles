@@ -39,6 +39,7 @@ int main(int argc, char* argv[])
 
    Sudoku input;
    cin >> input;
+
    Puzzle* puzzle = &input;
 
    srand(time(NULL));
