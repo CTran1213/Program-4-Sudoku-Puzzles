@@ -7,13 +7,14 @@ SudokuPopulation::SudokuPopulation(int populationSize, Puzzle*& firstPuzzle)
    SudokuFitness fitnessCalculator;
 
    for(int i=0; i<populationSize; i++){
-      Puzzle* puzzle = factory.createPuzzle(firstPuzzle);
+      Puzzle* puzzle  = factory.createPuzzle(firstPuzzle);
       int fitnessNum = fitnessCalculator.howFit(puzzle);
+      
       //Node* node = new Node(fitnessNum, puzzle);
       // Sudoku* temp = (Sudoku*) node->getPuzzle();
       // cout << *temp << endl;
       // cout << node->getFitnessNumber() << endl;
-      this->population_.push_back(new Node(fitnessNum, puzzle));
+      this->population_.push_back(new Node(fitnessNum, newPuzzle));
    }
    cout << "*****************************" << endl;
    //sortPopulation(this->population_, 0, this->population_.size()-1);
