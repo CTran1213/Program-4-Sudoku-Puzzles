@@ -15,11 +15,13 @@ class Node{
    }
    public:
       Node(int fitnessNumber, Puzzle*& puzzle);
+      Node(Node& newNode);
       ~Node();
-      bool operator<(const Node*& node) const;
-      bool operator>(const Node*& node) const;
+      bool operator<(const Node& node) const;
+      bool operator>(const Node& node) const;
       Puzzle*& getPuzzle();
       int getFitnessNumber();
+      Node& operator=(Node &newNode);
       
 
    private:

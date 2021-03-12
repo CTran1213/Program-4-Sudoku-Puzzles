@@ -8,6 +8,7 @@
 
 #pragma once
 #include "Puzzle.h"
+#include "Reproduction.h"
 
 class PuzzleFactory
 {
@@ -22,5 +23,7 @@ class PuzzleFactory
    //This method uses the Reproduction data member to create and return a new puzzle
    //Precondition: None
    //Postcondition: Returns a puzzle created from the sudokuoffspring object
-   virtual Puzzle*& createPuzzle(Puzzle*& sudoku) = 0;
+   virtual Puzzle* createPuzzle(Puzzle*& sudoku) = 0;
+   // protected:
+   // Reproduction* reproduction;
 };

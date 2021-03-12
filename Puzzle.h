@@ -15,6 +15,6 @@ public:
    {
       
    }
-   virtual vector<vector<int>> getSudokuArray() const = 0;
+   virtual vector<vector<int>> getSudokuArray() = 0;
 
 };

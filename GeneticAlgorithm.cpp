@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
       return -1;
       exit(-1);
    }
-
+   
    int populationSize = atoi(argv[1]);
    if(populationSize % 10 != 0){
       cout << "Error: Population size not multiple of ten." << endl;
@@ -44,21 +44,17 @@ int main(int argc, char* argv[])
 
    srand(time(NULL));
   
-   cout << "got here 1" << endl;
    SudokuPopulation population = SudokuPopulation(populationSize, puzzle);
-   cout << "got here 2" << endl;
 
-   // int generationCounter = 0;
-   // while(generationCounter < maxNumberGenerations && population.getBestFitness() != 0){
-   //    population.cull(90);
-   //    population.newGeneration(9);
-   //    cout << "got here 3" << endl;
-   //    ++generationCounter;
-   // }
-   // cout << "got here 4" << endl;
-   // Sudoku *bestPuzzle = (Sudoku *) population.getBestIndividual();
-   // cout << *bestPuzzle << endl;
-   // cout << population.getBestFitness() << endl;
-   // cout << "Counter: " << generationCounter << endl;
-   // return 0;
+   int generationCounter = 0;
+   while(generationCounter < maxNumberGenerations && population.getBestFitness() != 0){
+      population.cull(90);
+      population.newGeneration(9);
+      ++generationCounter;
+   }
+   Sudoku *bestPuzzle = (Sudoku *) population.getBestIndividual();
+   cout << "Best Puzzle: \n" << *bestPuzzle << endl;
+   cout << "Best Fitness Number: " << population.getBestFitness() << endl;
+   cout << "Counter: " << generationCounter << endl;
+   return 0;
 }

@@ -21,9 +21,9 @@ class SudokuFactory : public PuzzleFactory
       //This method sses the offspringCreator data member to create and return a new puzzle
       //Precondition: None
       //Postcondition: Returns a puzzle created from the sudokuoffspring object
-      Puzzle*& createPuzzle(Puzzle*& sudokuPuzzle);
+      Puzzle* createPuzzle(Puzzle*& sudokuPuzzle);
 
    private:
       //This object is used to create new mutated puzzles. It is used in the createPuzzle method
-      SudokuOffspring* offspringCreator_;
+      SudokuOffspring offspringCreator_;
 };

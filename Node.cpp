@@ -1,24 +1,30 @@
 #include "Node.h"
 
- Node::Node(int fitnessNumber, Puzzle*& puzzle)
- {
-    this->fitnessNumber_ = fitnessNumber;
-    this->puzzle_ = puzzle;
- }
-
-// Node::~Node()
-// {
-
-// }
-
-bool Node::operator<(const Node*& node) const
+Node::Node(int fitnessNumber, Puzzle*& puzzle)
 {
-   return this->fitnessNumber_ < node->fitnessNumber_;
+   this->fitnessNumber_ = fitnessNumber;
+   this->puzzle_ = puzzle;
 }
 
-bool Node::operator>(const Node*& node) const
+Node::Node(Node& newNode)
 {
-    return this->fitnessNumber_ > node->fitnessNumber_;
+   *this = newNode;
+}
+
+Node::~Node()
+{
+   delete (Sudoku*)this->puzzle_;
+   this->puzzle_ = nullptr;
+}
+
+bool Node::operator<(const Node& node) const
+{
+   return this->fitnessNumber_ < node.fitnessNumber_;
+}
+
+bool Node::operator>(const Node& node) const
+{
+   return this->fitnessNumber_ > node.fitnessNumber_;
 }
 
 Puzzle*& Node::getPuzzle() 
@@ -29,4 +35,11 @@ Puzzle*& Node::getPuzzle()
 int Node::getFitnessNumber() 
 {
    return this->fitnessNumber_;
+}
+
+Node& Node::operator=(Node& newNode)
+{
+   this->fitnessNumber_ = newNode.getFitnessNumber();
+   this->puzzle_ = newNode.getPuzzle();
+   return *this;
 }
