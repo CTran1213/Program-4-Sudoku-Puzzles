@@ -77,6 +77,10 @@ class SudokuPopulation : public Population
       //Postcondition: Vector is sorted in O(N^2) time. Returns true.
       bool insertionSort(vector<Node*>& item_vector, int first, int last);
 
+   private:
+      //the container which contains pointers to Node's, which hold the puzzle's
       vector<Node*> population_;
+
+      //The population size from command line, which is set at construction
       int populationSize_;
 };
