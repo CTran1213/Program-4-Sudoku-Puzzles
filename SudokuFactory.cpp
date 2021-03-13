@@ -15,6 +15,7 @@ SudokuFactory::SudokuFactory(Reproduction*& offspringCreator)
 {
    offspringCreator_ = *((SudokuOffspring *) offspringCreator);
 }
+
 //This method sses the offspringCreator data member to create and return 
 //a new puzzle
 //Precondition: None
