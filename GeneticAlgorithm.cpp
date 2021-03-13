@@ -83,6 +83,5 @@ int main(int argc, char* argv[])
    Sudoku *bestPuzzle = (Sudoku *) population.getBestIndividual();
    cout << "Best Puzzle: \n" << *bestPuzzle << endl;
    cout << "Best Fitness Number: " << population.getBestFitness() << endl;
-   cout << "Counter: " << generationCounter << endl;
    return 0;
 };
