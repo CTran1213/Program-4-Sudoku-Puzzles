@@ -1,0 +1,82 @@
+﻿Fatima Farah and Catherine Tran
+CSS 343
+Michael Stiber
+March 12th 2021
+
+
+Testing:
+Test Case 1: 1 Zero 649157832821396745375284196437928561518763429296415378153672984964031257782549613
+
+
+Population: 10  Generation: 5
+Fitness Number: 0
+
+
+It didn’t take that long to solve a puzzle with one zero/variable. This can be solved within the first or second generation.
+
+
+Test Case 2: 5 Zeroes
+649157832821390745375284106437928561510763429096415378153672984964031257782549613
+
+
+Population: 10  Generation: 5
+Fitness Number: 9
+
+
+Population: 10  Generation: 10
+Fitness Number: 6
+
+
+Population: 10  Generation: 20
+Fitness Number: 3
+
+
+Population: 10  Generation: 30
+Fitness Number: 0
+
+
+The more zeroes/variables there are, the more generations it takes to solve a puzzle.
+
+
+Test Case 3: 15 Zeroes
+000157832801390745305284106437920561510763429096415378100072984964031257782549013
+
+
+Population: 10  Generation: 5
+Fitness Number: 29
+
+
+Population: 10  Generation: 10
+Fitness Number: 22
+
+
+Population: 10  Generation: 20
+Fitness Number: 17
+
+
+Population: 10  Generation: 30
+Fitness Number: 13
+
+
+Population: 10 Generation: x (Ranged from 80 to 300, but 3000 generations wouldn’t produce a solution sometimes)
+Fitness Number: 0
+
+
+For this puzzle, the solutions were very unreliable. We could get a solution between 90-300 generations. In addition, when we tested with 3000 generations, the sudoku puzzle would not be solved sometimes.
+
+
+Analysis
+1. Can you reliably get good solutions? 
+No, we cannot reliably get good solutions. The mutation is random, so in theory we could never find a solution for a given puzzle. Each run for the same set of numbers could take more or less generations.
+
+
+2. How many generations does it take? 
+The less fixed numbers(more variables) there are, the more generations it takes to solve the puzzle. The more fixed numbers(less variable) there are, the less generations it takes to solve the puzzle.
+
+
+3.How does this depend on how hard the puzzle is? 
+The more generations a program runs, the harder the puzzle is. This is normally because there are more variables(zeroes).
+
+
+4. Does adding additional genetic operators improve performance?
+I think adding additional genetic operators could improve performance because there will be multiple operations we can pick from. Each population could work better with a different operation.The mutation operator isn’t the guaranteed best operation to use on the populations we are getting. For example, if you have 5 rows and 6 columns of candies, you can either add each individual candy together to get the total, or multiply the rows and columns. If we only had the addition operator, this scenario would go very slowly, but if we had both the multiplication and addition operator, this scenario would  improve.
