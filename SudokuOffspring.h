@@ -4,7 +4,7 @@
 //@studentID: 1727406
 //Catherine Tran ID: 2021829
 //Declaration or class emthods and data members
-//The SudokuFitness class implements "makeOffspring" for Puzzle objects. It uses the 
+//The SudokuOffspring class implements "makeOffspring" for Puzzle objects. It uses the 
 //mutation operator from genetic programming to create a copy of the given Puzzle 
 //which has a 3% chance of mutation
 
