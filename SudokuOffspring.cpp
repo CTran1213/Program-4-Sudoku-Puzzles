@@ -1,22 +1,12 @@
 //SudokuOffspring.h
 //3/12/2021
-//@author: Faduma Farah
-//@studentID: 1727406
-//Catherine Tran ID: 2021829
-//Declaration or class emthods and data members
-//The SudokuFitness class implements "makeOffspring" for Puzzle objects. It uses the 
-//mutation operator from genetic programming to create a copy of the given Puzzle 
-//which has a 3% chance of mutation
-
-//SudokuOffspring.h
-//3/12/2021
 //SudokuOffspring.cpp
 //3/12/2021
 //@author: Faduma Farah
 //@studentID: 1727406
 //Catherine Tran ID: 2021829
 //Implementation of SudokuOffspring.h
-//The SudokuFitness class implements "makeOffspring" for Puzzle objects. 
+//The SudokuOffspring class implements "makeOffspring" for Puzzle objects. 
 //It uses the mutation operator from genetic programming to create a copy
 /// of the given Puzzle which has a 3% chance of mutation
 #include "SudokuOffspring.h"
